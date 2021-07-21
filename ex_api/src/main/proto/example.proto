@@ -1,0 +1,23 @@
+syntax = "proto3";
+package com.sbt.grpc;
+option java_package = "com.sbt.grpc.type";
+option java_multiple_files = true;
+import "google/protobuf/timestamp.proto";
+
+message UserData
+{
+  string FirstName = 1;
+  string LastName = 2;
+  string DateofBirth = 3;
+  string Email = 4;
+}
+message RequestEx {
+  string Login = 1;
+  UserData UserData = 2;
+}
+
+message ResponseEx {
+  string Login = 1;
+  UserData UserData = 2;
+  string error = 3;
+}

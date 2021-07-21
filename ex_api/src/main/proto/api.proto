@@ -1,0 +1,13 @@
+syntax = "proto3";
+package com.sbt.grpc;
+option java_multiple_files = true;
+option java_package = "com.sbt.grpc.type";
+option java_outer_classname = "ApiEx";
+option objc_class_prefix = "";
+
+import "example.proto";
+
+service ServiceEx {
+  rpc ExecuteGrpc(RequestEx) returns (ResponseEx) {};
+  rpc UpdateGrpc(RequestEx) returns(ResponseEx){};
+}
